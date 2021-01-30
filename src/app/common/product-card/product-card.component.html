@@ -1,0 +1,45 @@
+<!-- <p>product-card works!</p>
+## Szükséges komponensek
+Ezeket nektek kell legenerálni, például így: `ng g c common/product-card`
+
+### 1. Termékkártya komponens
+Ez jeleníti meg az egyes termékeket. Az alábbi részei vannak:
+- Termékkép, teljes szélességében a kártya felső 30 - 50% át foglalja el.
+- Alatta egymás alatt: név, rövid leírás, készlet, ár. A formázás rátok van bízva. 
+Kiindulásnak jó lehet (de módosítsátok): `https://getbootstrap.com/docs/4.6/components/card/#example`
+- Működése: input tulajdonságként kapja meg a megjelenített terméket, 
+pld: `<app-product-card [product]="product"></app-product-card>`
+- Statikus komponens, azaz nem kell bele output tulajdonság (egyenlőre :)))) -->
+
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top p-3" [src]="itemImageUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{itemName}}</h5>      
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{itemDescription}}</li>
+          <li class="list-group-item">{{itemStock}}</li>
+          <li class="list-group-item">{{itemPrice}}</li>
+        </ul>      
+    </div>
+    <div class="card-footer">
+        <a href="#" class="card-link"><strong>Részletek</strong></a>
+    </div>
+  </div>
+
+  <!-- <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="itemImageUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{itemName}}</h5>      
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{itemDescription}}</li>
+          <li class="list-group-item">{{itemStock}}</li>
+          <li class="list-group-item">{{itemPrice}}</li>
+        </ul>
+      
+    </div>
+  </div> -->
