@@ -1,25 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-2">
-            <img src="./../../../assets/img/1.jpg" alt="">
-            {{prods[0].name}}
+        <div class="col-3" *ngFor="let currProd of prods">
+            <app-product-card [product]="currProd"></app-product-card>        
         </div>
-        <div class="col-2">
-            <img src="./../../../assets/img/2.jpg" alt="">
-            {{prods[1].name}}
-        </div>
-        <div class="col-2">
-             <img src="./../../../assets/img/3.jpg" alt="">
-            {{prods[2].name}}
-        </div>
-        <div class="col-2">
-             <img src="./../../../assets/img/4.jpg" alt="">
-            {{prods[3].name}}
-        </div>
-        <div class="col-2">
-             <img src="./../../../assets/img/5.jpg" alt="">
-            {{prods[4].name}}
-        </div>
+
     </div>
 </div>
 <p>
