@@ -1,16 +1,24 @@
-<div class="row d-flex justify-content-center">
-    
-    <div class="col-12">
-        <p>Home Page</p>
-        
-        <h1>Újdonságok</h1>
-        <app-product-turner [prods]="featList" class="row d-flex justify-content-center"></app-product-turner>
+<div class="container">
 
-        <h1>Akciós termékek</h1>
-        <app-product-turner [prods]="saleList" class="row d-flex justify-content-center"></app-product-turner>
+    <div class="row">
 
-        <h1>Összes termék</h1>
-        <app-product-turner [prods]="prodList" class="row d-flex justify-content-center"></app-product-turner>
+        <div class="col-12 ">
+
+            <h1 class=" cím">Újdonságok</h1>
+
+            <app-product-turner [prods]="featList" class="row d-flex justify-content-between">
+            </app-product-turner>
+
+            <h1 class="cím">Akciós termékek</h1>
+            <app-product-turner [prods]="saleList" class="row d-flex justify-content-between "></app-product-turner>
+            <h1 class="cím">Összes termék</h1>
+            <app-product-turner [prods]="prodList" class="row d-flex justify-content-between"></app-product-turner>
+
+
+
+        </div>
+
+
+
     </div>
-
 </div>
