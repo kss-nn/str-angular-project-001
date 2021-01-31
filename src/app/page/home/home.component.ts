@@ -11,7 +11,6 @@ import { ProductService } from './../../service/product.service';
 export class HomeComponent implements OnInit {
 
   prodList: Product[] = this.productService.list;
-
   featList: Product[] = this.generateList(this.prodList, true);
   saleList: Product[] = this.generateList(this.prodList, false);
 
