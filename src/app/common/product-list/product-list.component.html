@@ -1,0 +1,3 @@
+<div class="col-12 col-md-6 col-lg-2 mb-5 px-0" *ngFor="let currProd of prods | filter:phraseString: 'name'">
+    <app-product-card [product]="currProd"></app-product-card>
+</div>

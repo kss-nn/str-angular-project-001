@@ -9,6 +9,8 @@ import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
 import { ProductTurnerComponent } from './common/product-turner/product-turner.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { ProductListComponent } from './common/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ProductCardComponent } from './common/product-card/product-card.compone
     Cat02Component,
     HomeComponent,
     ProductTurnerComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    FilterPipe,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

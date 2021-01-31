@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   featList: Product[] = this.generateList(this.prodList, true);
   saleList: Product[] = this.generateList(this.prodList, false);
 
+  phrase: string = '';
+
   constructor(
       private productService: ProductService,
   ) {}
@@ -36,6 +38,10 @@ export class HomeComponent implements OnInit {
     }
     console.log(featArrFive);
     return featArrFive;
-};
+  };
+  
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
 
 }

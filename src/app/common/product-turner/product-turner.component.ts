@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 
+
 @Component({
   selector: 'app-product-turner',
   templateUrl: './product-turner.component.html',
@@ -10,9 +11,12 @@ export class ProductTurnerComponent implements OnInit {
 
   @Input() prods: Product[] = [];
 
-  constructor() { }
+  constructor(
+ 
+) {}
 
   ngOnInit(): void {
   }
+
 
 }
