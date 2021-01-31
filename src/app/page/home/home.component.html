@@ -3,13 +3,17 @@
     <div class="row">
 
         <div class="col-12 ">
-            <p>home works!</p>
-            <h1 class="mb-5">Újdonságok</h1>
-            <app-product-turner [prods]="featList" class="row d-flex justify-content-center"></app-product-turner>
-            <h1>Akciós termékek</h1>
-            <app-product-turner [prods]="saleList" class="row d-flex justify-content-center"></app-product-turner>
-            <h1>Összes termék</h1>
-            <app-product-turner [prods]="prodList" class="row d-flex justify-content-center"></app-product-turner>
+
+            <h1 class=" cím">Újdonságok</h1>
+
+            <app-product-turner [prods]="featList" class="row d-flex justify-content-between">
+            </app-product-turner>
+
+            <h1 class="cím">Akciós termékek</h1>
+            <app-product-turner [prods]="saleList" class="row d-flex justify-content-between "></app-product-turner>
+            <h1 class="cím">Összes termék</h1>
+            <app-product-turner [prods]="prodList" class="row d-flex justify-content-between"></app-product-turner>
+
         </div>
 
 
