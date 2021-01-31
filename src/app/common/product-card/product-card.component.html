@@ -8,19 +8,23 @@ Kiindulásnak jó lehet (de módosítsátok): `https://getbootstrap.com/docs/4.6
 pld: `<app-product-card [product]="product"></app-product-card>`
 - Statikus komponens, azaz nem kell bele output tulajdonság (egyenlőre :)))) -->
 
-<div class="card h-100">
-    <img class="card-img-top p-3" [src]="product.image" alt="Card image cap">
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">{{product.name}}</h5>      
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Leírás: {{product.description}}</li>
-          <li class="list-group-item">Raktár: {{product.stock}}</li>
-          <li class="list-group-item">Ár: {{product.price}} Ft</li>
-        </ul>      
-    </div>
-    <div class="card-footer mt-auto">
-        <a href="#" class="card-link"><strong>Részletek</strong></a>
-    </div>
+<div class="card h-100 shadow mx-4 mx-lg-0 border border-light ">
+  <img class="card-img-top p-3 " [src]="product.image" alt="Card image cap">
+
+  <div class="card-body d-flex flex-column px-0 ">
+    <h5 class="card-title text-center px-2 kartyacim">{{product.name}}</h5>
+
+    <ul class="list-group list-group-flush text-left">
+      <li class="list-group-item "><span class="kartyacim__leiras">Leírás:</span> <br
+          class="pb-1">{{product.description}}</li>
+      <li class="list-group-item">Raktár: {{product.stock}}</li>
+      <li class="list-group-item">Ár: {{product.price}} Ft</li>
+    </ul>
   </div>
+  <div class="card-footer mt-auto">
+    <a href="#" class="card-link"><strong>Részletek</strong></a>
+  </div>
+
+</div>
 
  
