@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
       setOfIndex.add(index);
       featArrFive.push(featArr[index]);
     }
+    console.log(featArrFive);
     return featArrFive;
 };
 
