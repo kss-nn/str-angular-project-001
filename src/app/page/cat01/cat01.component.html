@@ -1,1 +1,26 @@
-<p>cat01 works!</p>
+<div class="container-fluid">
+    <p>Category01</p>
+    <div class="row">
+        <div class="col-12 ">
+
+            <h1 class="cím">Újdonságok</h1>
+            <app-product-turner [prods]="featList" class="row d-flex justify-content-between"></app-product-turner>
+
+            <div class="row bg-light py-4">
+                <div class="col-8"></div>
+                <div class="col-12 col-lg-4">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input (keyup)="onChangePhrase($event)" type="text" class="form-control mr-sm-2"
+                            placeholder="Keresés">
+                        <button class="btn btn-outline-success ny-2 my-sm-0">Keresés</button>
+                    </form>
+                </div>
+            </div>
+
+            <h1 class="cím">Összes termék</h1>
+            <app-product-list [phraseString]="phrase" [prods]="catList" class="row d-flex justify-content-between">
+            </app-product-list>
+
+        </div>
+    </div>
+</div>
