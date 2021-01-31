@@ -11,9 +11,8 @@ import { ProductService } from './../../service/product.service';
 export class HomeComponent implements OnInit {
 
   prodList: Product[] = this.productService.list;
-
-  featList: Product[] = this.generateFeatList(this.prodList, true);
-  saleList: Product[] = this.generateFeatList(this.prodList, false);
+  featList: Product[] = this.generateList(this.prodList, true);
+  saleList: Product[] = this.generateList(this.prodList, false);
 
   constructor(
       private productService: ProductService,
@@ -22,7 +21,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  generateFeatList(prodArr: Product[], feat: boolean): Product[] {
+  generateList(prodArr: Product[], feat: boolean): Product[] {
     let featArr: Product[] = [];
     featArr = this.prodList.filter(item => item.featured === feat);
     let featArrFive: Product[] = [];
