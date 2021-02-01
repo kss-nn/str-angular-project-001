@@ -11,6 +11,7 @@ import { ProductTurnerComponent } from './common/product-turner/product-turner.c
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { ProductListComponent } from './common/product-list/product-list.component';
+import { PenznemPipe } from './pipe/penznem.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     ProductTurnerComponent,
     ProductCardComponent,
     FilterPipe,
-    ProductListComponent
+    ProductListComponent,
+    PenznemPipe
   ],
   imports: [
     BrowserModule,

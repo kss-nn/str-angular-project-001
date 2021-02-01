@@ -59,5 +59,24 @@ export class ProductService {
 	  { id: 50, catId: 3, name: 'Gabapentin', description: 'sem duis aliquam convallis', image: '/assets/img/50.jpg', price: 31434, stock: 101, featured: false, active: true },
   ];
 
-  constructor() { }
+	constructor() { }
+	
+	generateList(prodArr: Product[], feat: boolean): Product[] {
+		let featArr: Product[] = prodArr.filter(item => item.featured === feat);
+		let featArrFive: Product[] = [];
+		let setOfIndex = new Set([]);
+		let index = 0;
+		for (let i = 0; i < 5; i++){
+		  do {
+			index = Math.floor(Math.random() * featArr.length);
+		  } while (setOfIndex.has(index));
+		  setOfIndex.add(index);
+		  featArrFive.push(featArr[index]);
+		}
+		return featArrFive;
+	};
+	
+	genCatList(prodArr: Product[], cat: number): Product[] {
+		return prodArr.filter(item => item.catId === cat);
+	  }
 } 

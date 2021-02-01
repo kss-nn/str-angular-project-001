@@ -10,36 +10,19 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  prodList: Product[] = this.productService.list;
-  featList: Product[] = this.generateList(this.prodList, true);
-  saleList: Product[] = this.generateList(this.prodList, false);
+  prodList: Product[] = this.prodService.list;
+  featList: Product[] = this.prodService.generateList(this.prodList, true);
+  saleList: Product[] = this.prodService.generateList(this.prodList, false);
 
   phrase: string = '';
 
   constructor(
-      private productService: ProductService,
+      private prodService: ProductService,
   ) {}
 
   ngOnInit(): void {
   }
 
-  generateList(prodArr: Product[], feat: boolean): Product[] {
-    let featArr: Product[] = [];
-    featArr = this.prodList.filter(item => item.featured === feat);
-    let featArrFive: Product[] = [];
-    let setOfIndex = new Set([]);
-    let index = 0;
-    for (let i = 0; i < 5; i++){
-      do {
-        index = Math.floor(Math.random() * featArr.length);
-      } while (setOfIndex.has(index));
-      setOfIndex.add(index);
-      featArrFive.push(featArr[index]);
-    }
-    console.log(featArrFive);
-    return featArrFive;
-  };
-  
   onChangePhrase(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
