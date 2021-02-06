@@ -10,6 +10,7 @@ export class DataCellComponent implements OnInit {
 
   @Input() product: Product = new Product();
   @Input() key: string = '';
+  @Input() editable: string = '';
 
   constructor() { }
 
