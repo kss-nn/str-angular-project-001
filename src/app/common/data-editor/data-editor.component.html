@@ -1,0 +1,3 @@
+<div class="col-12">
+  <app-data-row  *ngFor="let currProd of prods | filter:phraseString: 'name'"[prod]="currProd"></app-data-row>
+</div>

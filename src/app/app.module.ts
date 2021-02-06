@@ -12,6 +12,11 @@ import { ProductCardComponent } from './common/product-card/product-card.compone
 import { FilterPipe } from './pipe/filter.pipe';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { PenznemPipe } from './pipe/penznem.pipe';
+import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { DataRowComponent } from './common/data-row/data-row.component';
+import { DataCellComponent } from './common/data-cell/data-cell.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +29,16 @@ import { PenznemPipe } from './pipe/penznem.pipe';
     ProductCardComponent,
     FilterPipe,
     ProductListComponent,
-    PenznemPipe
+    PenznemPipe,
+    AdminComponent,
+    DataEditorComponent,
+    DataRowComponent,
+    DataCellComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,22 +2,19 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  selector: 'app-data-editor',
+  templateUrl: './data-editor.component.html',
+  styleUrls: ['./data-editor.component.scss']
 })
-export class ProductListComponent implements OnInit {
+export class DataEditorComponent implements OnInit {
 
   @Input() phraseString: string = '';
 
   @Input() prods: Product[] = [];
 
-  constructor(
-
-  ) {}
+  constructor() { }
 
   ngOnInit(): void {
   }
-
 
 }

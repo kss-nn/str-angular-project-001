@@ -3,20 +3,20 @@ import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
-  selector: 'app-cat01',
-  templateUrl: './cat01.component.html',
-  styleUrls: ['./cat01.component.scss']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class Cat01Component implements OnInit {
+export class AdminComponent implements OnInit {
 
   prodList: Product[] = this.prodService.list;
-  catList: Product[] = this.prodService.genCatList(this.prodList,1);
-  featList: Product[] = this.prodService.generateList(this.catList, true);
+
+
 
   phrase: string = '';
 
   constructor(
-    private prodService: ProductService,
+    private prodService: ProductService
   ) {}
 
   ngOnInit(): void {

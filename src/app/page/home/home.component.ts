@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,7 +16,7 @@ export class HomeComponent implements OnInit {
   phrase: string = '';
 
   constructor(
-      private prodService: ProductService,
+    private prodService: ProductService,
   ) {}
 
   ngOnInit(): void {

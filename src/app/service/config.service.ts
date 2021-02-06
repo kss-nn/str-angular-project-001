@@ -11,12 +11,13 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'Sample Webshop';
+  appName: string = 'Patika Webshop';
 
   menuItems: IMenuItem[] = [
-    {text: 'Home', link: '/', icon: 'home'},
+    {text: 'Kezdőlap', link: '/', icon: 'home'},
     {text: 'Vényköteles', link: '/cat01'},
     {text: 'Recept nélküli', link: '/cat02'},
+    {text: 'Adminisztráció', link: '/admin'},
   ];
 
   constructor() { }

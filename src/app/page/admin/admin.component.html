@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <p>Adminisztráció</p>
+  <div class="row">
+      <div class="col-12 ">
+
+          <div class="row bg-light py-4">
+              <div class="col-8"></div>
+              <div class="col-12 col-lg-4">
+                  <form class="form-inline my-2 my-lg-0">
+                    <input (keyup)="onChangePhrase($event)" type="text"
+                      type="text" class="form-control mr-sm-2"
+                          placeholder="Keresés">
+                      <button class="btn btn-outline-success ny-2 my-sm-0">Keresés</button>
+                  </form>
+              </div>
+          </div>
+
+          <h1 class="cím">Terméklista</h1>
+          <app-data-editor [phraseString]="phrase" [prods]="prodList" class="row d-flex justify-content-between">
+          </app-data-editor>
+
+      </div>
+  </div>
+</div>
