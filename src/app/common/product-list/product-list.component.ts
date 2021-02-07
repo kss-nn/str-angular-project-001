@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
-import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,11 +10,10 @@ import { ProductService } from 'src/app/service/product.service';
 export class ProductListComponent implements OnInit {
 
   @Input() phraseString: string = '';
-
-  @Input() prods: Product[] = [];
+  @Input() prods: Observable<Product[]>;
 
   constructor(
-    
+
   ) {}
 
   ngOnInit(): void {

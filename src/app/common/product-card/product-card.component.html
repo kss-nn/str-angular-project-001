@@ -18,7 +18,7 @@ pld: `<app-product-card [product]="product"></app-product-card>`
       <li class="list-group-item "><span class="kartyacim__leiras">Leírás:</span> <br
           class="pb-1">{{product.description}}</li>
       <li class="list-group-item">Raktár: {{product.stock}}</li>
-      <li class="list-group-item">Ár: {{product.price}} Ft</li>
+      <li class="list-group-item">Ár: {{product.price | penznem}}</li>
     </ul>
   </div>
   <div class="card-footer mt-auto">
