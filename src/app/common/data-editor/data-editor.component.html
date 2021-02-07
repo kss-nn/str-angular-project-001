@@ -1,0 +1,28 @@
+<div class="table table-stripped">
+  <thead>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{col.text}}
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of prods | async | filter:phraseString:'name'">
+      <td *ngFor="let col of columns">
+        <input *ngIf="col.editable" [(ngModel)]="prod[col.key]" type="text" class="form-control">
+        <input *ngIf="!col.editable" [(ngModel)]="prod[col.key]" type="text" class="form-control" [class]="'disabled'">
+      </td>
+      <td>
+        <div class="btn-group">
+          <div class="btn btn-info">
+            <i class="fa fa-refresh"></i>
+          </div>
+          <div class="btn btn-danger">
+            <i class="fa fa-trash"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</div>

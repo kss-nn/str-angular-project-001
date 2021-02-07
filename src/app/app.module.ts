@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,13 @@ import { ProductTurnerComponent } from './common/product-turner/product-turner.c
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { ProductListComponent } from './common/product-list/product-list.component';
+import { PenznemPipe } from './pipe/penznem.pipe';
+import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { DataRowComponent } from './common/data-row/data-row.component';
+import { DataCellComponent } from './common/data-cell/data-cell.component';
+import { CategoryPipe } from './pipe/category.pipe';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +31,19 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     ProductTurnerComponent,
     ProductCardComponent,
     FilterPipe,
-    ProductListComponent
+    ProductListComponent,
+    PenznemPipe,
+    AdminComponent,
+    DataEditorComponent,
+    DataRowComponent,
+    DataCellComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
