@@ -18,6 +18,7 @@ import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './common/data-editor/data-editor.component';
 import { DataRowComponent } from './common/data-row/data-row.component';
 import { DataCellComponent } from './common/data-cell/data-cell.component';
+import { CategoryPipe } from './pipe/category.pipe';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { DataCellComponent } from './common/data-cell/data-cell.component';
     AdminComponent,
     DataEditorComponent,
     DataRowComponent,
-    DataCellComponent
+    DataCellComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

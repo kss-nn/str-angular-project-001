@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
+import { ThrowStmt } from '@angular/compiler';
+import { getAllLifecycleHooks } from '@angular/compiler/src/lifecycle_reflector';
 import { Injectable } from '@angular/core';
+import { async } from '@angular/core/testing';
 import { Observable } from 'rxjs';
 import { Product } from '../model/product';
 
@@ -86,9 +89,11 @@ export class ProductService {
 		  featArrFive.push(featArr[index]);
 		}
 		return featArrFive;
-	};
+  };
 
+/*  Szűrő van helyette: category-pipe
 	genCatList(prodArr: Product[], cat: number): Product[] {
 		return prodArr.filter(item => item.catId === cat);
 	  }
+  */
 }

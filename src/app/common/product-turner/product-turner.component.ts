@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 
 
@@ -9,10 +10,11 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductTurnerComponent implements OnInit {
 
-  @Input() prods: Product[] = [];
+  //@Input() prods: Product[] = [];
+  @Input() prods: Observable<Product[]>;
 
   constructor(
- 
+
 ) {}
 
   ngOnInit(): void {

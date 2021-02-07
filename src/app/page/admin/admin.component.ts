@@ -12,7 +12,7 @@ import { ITableCol, TableService } from 'src/app/service/table.service';
 export class AdminComponent implements OnInit {
 
   //-----Old version
-  prodList: Product[] = this.prodService.list;
+  //prodList: Product[] = this.prodService.list;
   //----------------
 
   prodList$: Observable<Product[]> = this.prodService.getAll();

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -9,9 +10,11 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  prodList: Product[] = this.prodService.list;
-  featList: Product[] = this.prodService.generateList(this.prodList, true);
-  saleList: Product[] = this.prodService.generateList(this.prodList, false);
+  //prodList: Product[] = this.prodService.list;
+  //featList: Product[] = this.prodService.generateList(this.prodList, true);
+  //saleList: Product[] = this.prodService.generateList(this.prodList, false);
+
+  prodList$: Observable<Product[]> = this.prodService.getAll();
 
   phrase: string = '';
 
