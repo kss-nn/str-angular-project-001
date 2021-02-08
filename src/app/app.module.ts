@@ -19,6 +19,8 @@ import { DataEditorComponent } from './common/data-editor/data-editor.component'
 import { DataRowComponent } from './common/data-row/data-row.component';
 import { DataCellComponent } from './common/data-cell/data-cell.component';
 import { CategoryPipe } from './pipe/category.pipe';
+import { FeaturedPipe } from './featured.pipe';
+import { RandomizePipe } from './randomize.pipe';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { CategoryPipe } from './pipe/category.pipe';
     DataEditorComponent,
     DataRowComponent,
     DataCellComponent,
-    CategoryPipe
+    CategoryPipe,
+    FeaturedPipe,
+    RandomizePipe
   ],
   imports: [
     BrowserModule,
