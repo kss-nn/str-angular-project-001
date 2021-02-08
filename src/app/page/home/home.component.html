@@ -4,10 +4,10 @@
         <div class="col-12 ">
 
             <h1 class="cím">Újdonságok</h1>
-            <app-product-turner [prods]="" class="row d-flex justify-content-between"></app-product-turner>
+            <app-product-turner [prods]="prodList$ | async | category:true:'featured' | slice:6:11" class="row d-flex justify-content-between"></app-product-turner>
 
             <h1 class="cím">Akciós termékek</h1>
-            <app-product-turner [prods]="" class="row d-flex justify-content-between "></app-product-turner>
+            <app-product-turner [prods]="prodList$ | async | category:false:'active' | slice:0:5" class="row d-flex justify-content-between "></app-product-turner>
 
             <div class="row bg-light py-4">
                 <div class="col-8"></div>
