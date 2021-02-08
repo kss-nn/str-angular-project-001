@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 import { ITableCol, TableService } from 'src/app/service/table.service';
 
 @Component({
@@ -14,9 +15,23 @@ export class DataEditorComponent implements OnInit {
   @Input() prods: Observable<Product[]>;
   @Input() columns: ITableCol[] = [];
 
-  constructor() { }
+  constructor(
+    private prodService: ProductService,
+  ) { }
 
   ngOnInit(): void {
   }
+
+  onUpdate(product: Product): void {
+    this.prodService.update(product).subscribe(
+      updateProd => console.log(updateProd)
+    );
+ }
+
+  onDelete(product: Product): void {
+    this.prodService.remove(product).subscribe(
+      () => console.log('deleted')
+    );
+ }
 
 }

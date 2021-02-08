@@ -75,6 +75,13 @@ export class ProductService {
     return this.http.get<Product[]>(this.jsonUrl);
   }
 
+  update(prod: Product): Observable<Product> {
+    return this.http.patch<Product>(`${this.jsonUrl}/${prod.id}`, prod);
+  }
+
+  remove(prod: Product): Observable<Product> {
+    return this.http.delete<Product>(`${this.jsonUrl}/${prod.id}`);
+  }
 
 	generateList(prodArr: Product[], feat: boolean): Product[] {
 		let featArr: Product[] = prodArr.filter(item => item.featured === feat);
